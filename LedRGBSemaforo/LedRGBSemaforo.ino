@@ -1,32 +1,33 @@
 int vermelho = 3;
-int verde = 4;
-int azul = 5;
+int amarelo = 4;
+int verde = 5;
 
 void setup() {
 
   pinMode(vermelho, OUTPUT);
+  pinMode(amarelo, OUTPUT);
   pinMode(verde, OUTPUT);
-  pinMode(azul, OUTPUT);
 }
 
 void loop() {
 
   // Verde
   digitalWrite(vermelho, LOW);
-  digitalWrite(verde, HIGH);
-  digitalWrite(azul, LOW);
-  delay(3000);
+  digitalWrite(amarelo, LOW);
+  digitalWrite(verde, HIGH);  
+  delay(10000);
 
   // Amarelo
-  analogWrite(vermelho, 255);
-  analogWrite(verde, 255);
-  analogWrite(azul, 0);
-  delay(1500);
+  digitalWrite(vermelho, LOW);
+  digitalWrite(amarelo, HIGH);
+  digitalWrite(verde, LOW);  
+  delay(5000);   
 
   // Vermelho
   digitalWrite(vermelho, HIGH);
   digitalWrite(verde, LOW);
-  digitalWrite(azul, LOW);
-  delay(3000);
+  digitalWrite(amarelo, LOW);
+  delay(10000);
+  
 
 }
